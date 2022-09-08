@@ -7,7 +7,7 @@ const ListAccount = () =>{
 
     useEffect(() => {
         axios.get("https://api.sampleapis.com/fakebank/accounts").then((res) =>{
-
+            setData(res.data)
         })
     }, [])
 
