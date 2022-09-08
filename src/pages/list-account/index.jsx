@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "antd";
+import axios from "axios";
 
 const ListAccount = () =>{
-    const dataSource = [
-        {
-          key: '1',
-          name: 'Mike',
-          age: 32,
-          address: '10 Downing Street',
-        },
-        {
-          key: '2',
-          name: 'John',
-          age: 42,
-          address: '10 Downing Street',
-        },
-      ];
-      
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get("https://api.sampleapis.com/fakebank/accounts").then((res) =>{
+
+        })
+    }, [])
+
       const columns = [
         {
           title: 'Name',
@@ -39,7 +33,8 @@ const ListAccount = () =>{
         <>
         <h1>Bank Account</h1>
         <br />
-        <Table dataSource={dataSource} columns={columns} />;
+        
+        <Table dataSource={data} columns={columns} />;
         </>
     );
 };
