@@ -13,20 +13,25 @@ const ListAccount = () =>{
 
       const columns = [
         {
-          title: 'Name',
-          dataIndex: 'name',
-          key: 'name',
+          title: 'Transaction Date',
+          dataIndex: 'transactionDate',
+          key: 'transactionDate',
         },
         {
-          title: 'Age',
-          dataIndex: 'age',
-          key: 'age',
+          title: 'Category',
+          dataIndex: 'category',
+          key: 'category',
         },
         {
-          title: 'Address',
-          dataIndex: 'address',
-          key: 'address',
+          title: 'Debit',
+          dataIndex: 'debit',
+          key: 'debit',
         },
+        {
+            title: 'Credit',
+            dataIndex: 'credit',
+            key: 'credit',
+          },
       ];
 
     return(
